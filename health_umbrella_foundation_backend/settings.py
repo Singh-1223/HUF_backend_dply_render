@@ -123,16 +123,28 @@ WSGI_APPLICATION = "health_umbrella_foundation_backend.wsgi.application"
     #     "PORT": config("PORT"),
     # }
 # }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': env('DB_NAME', default='postgres'),  # The database name
+#         'USER': env('DB_USER', default='postgres.eppghugewivtzqwqgamu'),
+#         'PASSWORD': env('DB_PASSWORD', default='my_juf@123#'),
+#         'HOST': env('DB_HOST', default='aws-0-ap-south-1.pooler.supabase.com'),
+#         'PORT': env('DB_PORT', default='6543'),
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env('DB_NAME', default='postgres'),  # The database name
-        'USER': env('DB_USER', default='postgres.eppghugewivtzqwqgamu'),
-        'PASSWORD': env('DB_PASSWORD', default='my_juf@123#'),
-        'HOST': env('DB_HOST', default='aws-0-ap-south-1.pooler.supabase.com'),
-        'PORT': env('DB_PORT', default='6543'),
-    }
+        'NAME': 'your_database_name',
+        'USER': 'huf_user',
+        'PASSWORD': 'your_password',
+        'HOST': 'dpg-crbfil5svqrc73evuss0-a.oregon-postgres.render.com',
+        'PORT': '5432',
+    }
 }
+
 # if ENVIRONMENT == 'development':
 #     DATABASES = {
 #     "default": {
