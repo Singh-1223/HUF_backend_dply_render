@@ -123,7 +123,7 @@ WSGI_APPLICATION = "health_umbrella_foundation_backend.wsgi.application"
     #     "PORT": config("PORT"),
     # }
 # }
- DATABASES = {
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': env('DB_NAME', default='postgres'),  # The database name
