@@ -131,7 +131,7 @@ DATABASES = {
         'PASSWORD': env('DB_PASSWORD', default='my_juf@123#'),
         'HOST': env('DB_HOST', default='aws-0-ap-south-1.pooler.supabase.com'),
         'PORT': env('DB_PORT', default='6543'),
-    }
+    }
 }
 
 # DATABASES = {
