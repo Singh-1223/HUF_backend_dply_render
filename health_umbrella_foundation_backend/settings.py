@@ -123,16 +123,16 @@ WSGI_APPLICATION = "health_umbrella_foundation_backend.wsgi.application"
     #     "PORT": config("PORT"),
     # }
 # }
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': env('DB_NAME', default='postgres'),  # The database name
-#         'USER': env('DB_USER', default='postgres.eppghugewivtzqwqgamu'),
-#         'PASSWORD': env('DB_PASSWORD', default='my_juf@123#'),
-#         'HOST': env('DB_HOST', default='aws-0-ap-south-1.pooler.supabase.com'),
-#         'PORT': env('DB_PORT', default='6543'),
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': env('DB_NAME', default='postgres'),  # The database name
+        'USER': env('DB_USER', default='postgres.eppghugewivtzqwqgamu'),
+        'PASSWORD': env('DB_PASSWORD', default='my_juf@123#'),
+        'HOST': env('DB_HOST', default='aws-0-ap-south-1.pooler.supabase.com'),
+        'PORT': env('DB_PORT', default='6543'),
+    }
+}
 
 # DATABASES = {
 #     'default': {
@@ -145,18 +145,18 @@ WSGI_APPLICATION = "health_umbrella_foundation_backend.wsgi.application"
 #     }
 # }
 
-if ENVIRONMENT == 'development':
-    DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-      }
-    }
-else:
-    import dj_database_url
-    DATABASES = {
-        "default": dj_database_url.parse(env("DATABASE_URL"))
-    }
+# if ENVIRONMENT == 'development':
+#     DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#       }
+#     }
+# else:
+#     import dj_database_url
+#     DATABASES = {
+#         "default": dj_database_url.parse(env("DATABASE_URL"))
+#     }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
